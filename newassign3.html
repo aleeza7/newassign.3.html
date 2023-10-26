@@ -1,0 +1,239 @@
+<html>
+<head>
+    <title>Guess the Number!</title>
+    <style>
+       body {
+        align-content: center;
+        background-color: #680000;
+        color: white;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        display: grid;
+
+        text-align: center;
+         font-size: 60px;
+
+         grid-template-columns: 1fr 1fr 1fr;
+         grid-template-rows: 100px 100px 1fr 1fr 1fr 1fr 100px;
+         gap: 10px;
+
+         height: 99vh;
+         width: 99vw;
+
+       }
+        h2 {font-size: 25px; }
+        
+        div {
+         align-content: center;
+         border: 3px solid black;
+         vertical-align: middle;
+         }
+
+         button {
+           width: 95%;
+           height: 95%;
+
+    
+         }
+
+         .displayButton {
+            background-color: #888888;
+            
+         }
+
+       .title {
+          grid-row-start: 1;
+          grid-row-end: 2;
+          grid-column-start: 1;
+          grid-column-end: 4;
+          background: #dd0000;
+           border: #ffffff solid 4px; 
+            font-size: 50px;
+          }
+
+        .informationDisplay {
+            grid-row-start: 2;
+          grid-row-end: 3;
+          grid-column-start: 1;
+          grid-column-end: 4;
+          background: #000000;
+           border:#dd0000 solid 4px; 
+           vertical-align: center;
+            font-size: 35px;
+        }
+
+      .button1 {
+          grid-row-start: 3;
+          grid-row-end: 4;
+          grid-column-start: 1;
+          grid-column-end: 2;
+          color: black;
+          font-size: 30px; }
+
+      .button2 {
+          grid-row-start: 4;
+          grid-row-end: 5;
+          grid-column-start: 1;
+          grid-column-end: 2;
+              color: black; 
+          font-size: 30px;}
+
+          .button3 {
+          grid-row-start: 5;
+          grid-row-end: 6;
+          grid-column-start: 1;
+          grid-column-end: 2;
+              color: black;     font-size: 30px;}
+
+          .button4 {
+          grid-row-start: 6;
+          grid-row-end: 7;
+          grid-column-start: 1;
+          grid-column-end: 2;
+              color: black;     font-size: 30px;}
+          
+         .button5 {
+          grid-row-start: 3;
+          grid-row-end: 4;
+          grid-column-start: 2;
+          grid-column-end: 3;
+              color: black;     font-size: 30px; }
+
+          .button6 {
+          grid-row-start: 4;
+          grid-row-end: 5;
+          grid-column-start: 2;
+          grid-column-end: 3;
+              color: black;     font-size: 30px;}
+
+          .button7 {
+          grid-row-start: 5;
+          grid-row-end: 6;
+          grid-column-start: 2;
+          grid-column-end: 3;
+              color: black;     font-size: 30px; }
+
+          .button8 {
+          grid-row-start: 6;
+          grid-row-end: 7;
+          grid-column-start: 2;
+          grid-column-end: 3;
+              color: black;     font-size: 30px;}
+          
+          .button9 {
+          grid-row-start: 3;
+          grid-row-end: 4;
+          grid-column-start: 3;
+          grid-column-end: 4;
+              color: black;     font-size: 30px;}
+
+          
+          .button10 {
+          grid-row-start: 4;
+          grid-row-end: 5;
+          grid-column-start: 3;
+          grid-column-end: 4;
+              color: black;     font-size: 30px; }
+
+          
+          .button11 {
+          grid-row-start: 5;
+          grid-row-end: 6;
+          grid-column-start: 2;
+          grid-column-end: 3;
+              color: black;     font-size: 30px; }
+      
+      
+      
+          .footer {
+          grid-row-start: 7;
+          grid-row-end: 9;
+          grid-column-start: 1;
+          grid-column-end: 4;
+          background: #7a7979;
+          color: rgb(0, 0, 0);     font-size: 100px;
+          font-family: "Lucida Handwriting", cursive;}
+
+   
+
+   
+   h1 {
+    font-size: 50px;
+
+   }
+
+    </style> 
+<script> 
+
+    var myFirstVariable = numberToAdd;
+    var mySecondVariable = 0;
+
+    function numberOfGuesses() {
+        document.getElementById("numberEleven").innerHTML = "Number of Guesses:" + mySecondvariable  <br> "Your last guess:" + myFirstVariable; }
+
+    
+    function guess() {
+      mySecondVariable = mySecondVariable + 1; 
+            document.getElementById("numberToAdd")
+            myFirstVariable = Number(document.getElementById("numberToAdd"). value); 
+        if(myFirstVariable==31) document.getElementById("numberToAdd").disabled = true; 
+        if(myFirstVariable==31) document.getElementById("numberSix").disabled = true; 
+        if(myFirstVariable==31) document.getElementById("footer").innerHTML = "Good job! You got it!"; 
+        if(myFirstVariable<=10 && myFirstVariable>0) document.getElementById("footer").innerHTML = "Much too low!";
+        if(myFirstVariable<=28 && myFirstVariable>10) document.getElementById("footer").innerHTML = "You're close!.";
+        if(myFirstVariable<=88 && myFirstVariable>=65) document.getElementById("footer").innerHTML = "Much too high!";
+        if(myFirstVariable>=40 && myFirstVariable<65) document.getElementById("footer").innerHTML = "Woah, much too high!!"; 
+        if(myFirstVariable>88 && b<=100) document.getElementById("footer").innerHTML = "Yikes, tone it down!"; 
+        if(myFirstVariable>100) document.getElementById("numberToAdd").disabled = true;}
+       
+
+    function assignment() {
+document.getElementById("communicate").innerHTML = "Guess a number 1-100"; 
+    }
+
+    function reset() {
+document.getElementById("numberToAdd").disabled = false; 
+document.getElementById("numberSix").disabled = false; 
+c = Number(document.getElementById("numberToAdd").value) 
+
+
+</script>
+</head>
+
+<body>
+    <div class="title">
+    Number Guesser
+
+       
+    </div>
+
+    
+
+    
+    <div class="button5" onmouseenter = "this.style='border: 3px solid #0088aa;';" onmouseleave = "this.style='border: 3px solid #000000;';" >
+        <button id="numberTwo" class="displayButton";> 
+
+
+    </div>
+
+    <div class="button6" onmouseenter = "this.style='border: 3px solid #0088aa;';" onmouseleave = "this.style='border: 3px solid #000000;';" >
+        <button id="numberSix" class = "displayButton" onclick="guess();">
+      <h2> Click here to Guess! </h2>
+</button></div>
+
+ <div class="button7" id="guessChanger">
+    <h2> Number of Guesses: </h2>
+
+ </div>
+
+    </button>
+    <div class="button11" onmouseenter = "this.style='border: 3px solid #0088aa;';" onmouseleave = "this.style='border: 3px solid #000000;';" >
+        <button id="numberEleven" class = "displayButton"; onclick="numberOfGuesses();"> 
+            <h2> Click to find the number of Guesses <br> Click here to find last guess </h2></button></div>
+
+    <div class="footer" onmouseenter = "this.style='border: 3px solid #0088aa;';" onmouseleave = "this.style='border: 3px solid #000000;';" > 
+        <button id="footer" style = font-size:x-large; font-family: "Lucida Handwriting", cursive;> </button>
+    </div>
+
+</body>
+
+</html>
