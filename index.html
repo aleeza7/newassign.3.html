@@ -1,0 +1,65 @@
+<html> 
+<head>
+  <style>
+p {
+
+}
+    
+  </style>
+<script>
+var theNumber = 55; 
+var userGuess = 0;
+var numGuess = 0;
+var message = "Pick a number 1-100";
+
+  function guess() 
+       
+    {
+  document.getElementById("numGuessDisplay").innerHTML = "Number of Guesses:" + numGuess;
+        userGuess = document.getElementById("userInput").value;
+            document.getElementById("lastGuessDisplay").innerHTML = "Last  Guess:" + userGuess;
+         
+      
+      if(userGuess<theNumber)
+      {
+        message = "Woah! Go Higher!" ;
+      }
+        if(userGuess>theNumber)
+      {
+        message = "Woah! Go Lower!" ;
+      }
+          if(userGuess==55) 
+        {
+          message = "You Win!";
+          document.getElementById("submitButton").disabled.true;
+          document.getElementById("userInput").disabled.true;
+            }
+       numGuess++;
+
+                document.getElementById("messageCenter").innerHTML = message;
+  
+  
+         
+    }
+      
+    
+
+  
+</script>
+
+  
+</head>
+  <body>
+<center> 
+    <h1> Guess My Number</h1>
+    <p id="messageCenter"> Pick a number 1-100</p>
+    <input id ="userInput"> 
+    <button id= "sumbitButton" onclick = "guess();"> 
+    Guess! </button>
+    <p id= "numGuessDisplay"> Number of Guesses: 0 </p>
+    <p id= "lastGuessDisplay"> Last Guess: </p>
+
+  
+    </center>
+  </body>
+</html>
