@@ -1,45 +1,79 @@
 <html> 
 <head>
   <style>
-p {
 
-}
     
   </style>
 <script>
-var theNumber = 55; 
-var userGuess = 0;
-var numGuess = 0;
+var theNumber = Math.floor(Math.random()*100)+1; 
+var currentGuess = 0;
+var numGuesses = 0;
 var message = "Pick a number 1-100";
-
-  function guess() 
-       
-    {
-  document.getElementById("numGuessDisplay").innerHTML = "Number of Guesses:" + numGuess;
+var dummy = 1; 
+  
+  function guess() {
+     CurrentGuess = theNumber(document.getElementById("userGuess").value);
+    document.getElementById("userGuess").value = "";
+       dummy = Math.floor(Math.random()*3)+1;
         userGuess = document.getElementById("userInput").value;
-            document.getElementById("lastGuessDisplay").innerHTML = "Last  Guess:" + userGuess;
-         
+
+    
+      if(currentGuess>theNumber) {
+         document.getElementById("messageDisplay").style = "color:#229911;"
+        if(dummy==1) {
+          message= "You Guessed Too High!";
+        }
+
+        else if(dummy==2) {
+          message = "Guess lower!";
+        }
+
+        else {
+          message = "Woah! Calm down!! Not so big";
+        }
+      }
+
       
-      if(userGuess<theNumber)
+      if(currentGuess<theNumber) {
+         document.getElementById("messageDisplay").style = "color:#223399;"
+        if(dummy==1) {
+          message= "You Guessed Too Low!";
+        }
+
+        else if(dummy==2) {
+          message = "Guess Higher!";
+        }
+
+        else {
+          message = "Woah! Thats too tiny!! Not so little!";
+        }
+    
+      }
+      
+      if(currentGuess<theNumber)
       {
         message = "Woah! Go Higher!" ;
       }
-        if(userGuess>theNumber)
+        if(currentGuess>theNumber)
       {
         message = "Woah! Go Lower!" ;
       }
-          if(userGuess==55) 
+          if(currentGuess=theNumber) 
         {
+          document.getElementById("messageDisplay").style = "color:#ff0000;"
           message = "You Win!";
-          document.getElementById("submitButton").disabled.true;
-          document.getElementById("userInput").disabled.true;
+          document.getElementById("guessButton").disabled = true;
+          document.getElementById("userGuess").disabled = true;
+        } 
+      
+   
             }
        numGuess++;
-
-                document.getElementById("messageCenter").innerHTML = message;
-  
-  
-         
+document.getElementByID("numGuess").innerHTML = "Number of Guesses:" + numGuess;
+document.getElementById("messageCenter").innerHTML = message;
+document.getElementById("lastGuessDisplay").innerHTML = "Last  Guess:" + userGuess;
+document.getElementById("messageDisplay").innerHTML= message; 
+document.getElementById("userGuess").focus(); 
     }
       
     
