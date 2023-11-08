@@ -1,25 +1,24 @@
 <html> 
 <head>
-  <style>
-
-    
-  </style>
+  
 <script>
 var theNumber = Math.floor(Math.random()*100)+1; 
 var currentGuess = 0;
-var numGuesses = 0;
+var numGuess = 0;
 var message = "Pick a number 1-100";
 var dummy = 1; 
   
+  
   function guess() {
-     CurrentGuess = theNumber(document.getElementById("userGuess").value);
+     currentGuess = Number(document.getElementById("userGuess").value);
     document.getElementById("userGuess").value = "";
        dummy = Math.floor(Math.random()*3)+1;
-        userGuess = document.getElementById("userInput").value;
-
+        userGuess = document.getElementById("userGuess").value;
+  
     
       if(currentGuess>theNumber) {
          document.getElementById("messageDisplay").style = "color:#229911;"
+      }
         if(dummy==1) {
           message= "You Guessed Too High!";
         }
@@ -59,7 +58,7 @@ var dummy = 1;
       {
         message = "Woah! Go Lower!" ;
       }
-          if(currentGuess=theNumber) 
+          if(currentGuess==theNumber) 
         {
           document.getElementById("messageDisplay").style = "color:#ff0000;"
           message = "You Win!";
@@ -68,15 +67,15 @@ var dummy = 1;
         } 
       
    
-          
+        
        numGuess++;
-document.getElementByID("numGuess").innerHTML = "Number of Guesses:" + numGuess;
-document.getElementById("messageCenter").innerHTML = message;
-document.getElementById("lastGuessDisplay").innerHTML = "Last  Guess:" + userGuess;
-document.getElementById("messageDisplay").innerHTML= message; 
+document.getElementById("numGuessDisplay").innerHTML = "Number of Guesses:" + numGuess;
+document.getElementById("messageDisplay").innerHTML = message;
+document.getElementById("lastGuessDisplay").innerHTML = "Last  Guess:" + currentGuess;
+
 document.getElementById("userGuess").focus(); 
-    }
-      
+    
+  }  
     
 
   
@@ -87,12 +86,12 @@ document.getElementById("userGuess").focus();
   <body>
 <center> 
     <h1> Guess My Number</h1>
-    <p id="messageCenter"> Pick a number 1-100</p>
-    <input id ="userInput"> 
-    <button id= "sumbitButton" onclick = "guess();"> 
+    <p id="messageDisplay"> Pick a number 1-100</p>
+    <input id ="userGuess"> 
+    <button id= "sumbitButton" onclick = "guess()"> 
     Guess! </button>
     <p id= "numGuessDisplay"> Number of Guesses: 0 </p>
-    <p id= "lastGuessDisplay"> Last Guess: </p>
+    <p id= "lastGuessDisplay"> Last Guess:__ </p>
 
   
     </center>
