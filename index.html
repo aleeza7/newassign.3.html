@@ -60,8 +60,8 @@ var dummy = 1;
       }
           if(currentGuess==theNumber) 
         {
+           message = "You Win!";
           document.getElementById("messageDisplay").style = "color:#ff0000;"
-          message = "You Win!";
           document.getElementById("guessButton").disabled = true;
           document.getElementById("userGuess").disabled = true;
         } 
@@ -88,7 +88,7 @@ document.getElementById("userGuess").focus();
     <h1> Guess My Number</h1>
     <p id="messageDisplay"> Pick a number 1-100</p>
     <input id ="userGuess"> 
-    <button id= "sumbitButton" onclick = "guess()"> 
+    <button id= "guessButton" onclick = "guess()"> 
     Guess! </button>
     <p id= "numGuessDisplay"> Number of Guesses: 0 </p>
     <p id= "lastGuessDisplay"> Last Guess:__ </p>
