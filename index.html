@@ -1,6 +1,25 @@
 <html> 
 <head>
+  <style> 
+  body {
+text-align: center;
+        font-size: 40px;
+  }
+
+    .in {
+  width: 200px;
+  height: 50px;
+}
+
+    h1 {
+
+      text-align: center;
+        font-size: 60px;
+
+    }
   
+  
+  </style>
 <script>
 var theNumber = Math.floor(Math.random()*100)+1; 
 var currentGuess = 0;
@@ -83,13 +102,15 @@ document.getElementById("userGuess").focus();
 
   
 </head>
-  <body>
+  <body bgcolor= "#B9FF73">
 <center> 
     <h1> Guess My Number</h1>
     <p id="messageDisplay"> Pick a number 1-100</p>
-    <input id ="userGuess"> 
+   <div class = "in">
+  <input id ="userGuess"> 
+   </div>
     <button id= "guessButton" onclick = "guess()"> 
-    Guess! </button>
+    <h2> Guess! </h2> </button>
     <p id= "numGuessDisplay"> Number of Guesses: 0 </p>
     <p id= "lastGuessDisplay"> Last Guess:__ </p>
 
